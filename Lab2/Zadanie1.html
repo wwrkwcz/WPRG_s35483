@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteka Akademicka - Rejestracja</title>
+</head>
+<body>
+<h1>Biblioteka Akademicka — Rejestracja czytelnika</h1>
+<form action="rejestracja.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Dane osobowe</legend>
+        <label for="imie">Imię:</label><br>
+        <input type="text" id="imie" name="imie" required minlength="2" maxlength="50" placeholder="Wpisz imię" autofocus><br><br>
+        <label for="nazwisko">Nazwisko:</label><br>
+        <input type="text" id="nazwisko" name="nazwisko" required maxlength="60" placeholder="Wpisz nazwisko"><br><br>
+        <label for="email">Adres e-mail:</label><br>
+        <input type="email" id="email" name="email" required multiple placeholder="adres@example.com"><br><br>
+        <label for="tel">Numer telefonu:</label><br>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" placeholder="123456789"><br><br>
+        <label for="data_ur">Data urodzenia:</label><br>
+        <input type="date" id="data_ur" name="data_ur" min="1900-01-01" value="2026-01-01"><br><br>
+        <label>Płeć:</label><br>
+        <input type="radio" id="plec_k" name="plec" value="Kobieta">
+        <label for="plec_k">Kobieta</label>
+        <input type="radio" id="plec_m" name="plec" value="Mężczyzna">
+        <label for="plec_m">Mężczyzna</label>
+        <input type="radio" id="plec_i" name="plec" value="Inna">
+        <label for="plec_i">Inna</label><br><br>
+        <label for="pesel">Numer PESEL:</label><br>
+        <input type="password" id="pesel" name="pesel" pattern="[0-9]{11}" autocomplete="off" placeholder="11 cyfr">
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Adres</legend>
+        <label for="ulica">Ulica i numer:</label><br>
+        <input type="text" id="ulica" name="ulica" required placeholder="np. ul. Książkowa 5/10"><br><br>
+        <label for="kod">Kod pocztowy:</label><br>
+        <input type="text" id="kod" name="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000"><br><br>
+        <label for="miasto">Miasto:</label><br>
+        <input type="text" id="miasto" name="miasto" list="miasta_lista">
+        <datalist id="miasta_lista">
+            <option value="Gdańsk">
+            <option value="Gdynia">
+            <option value="Sopot">
+            <option value="Warszawa">
+            <option value="Wrocław">
+            <option value="Kraków">
+        </datalist><br><br>
+        <label for="kraj">Kraj:</label><br>
+        <select id="kraj" name="kraj" required>
+            <optgroup label="Europa">
+                <option value="Polska" selected>Polska</option>
+                <option value="Niemcy">Niemcy</option>
+                <option value="Czechy">Czechy</option>
+                <option value="Słowacja">Słowacja</option>
+            </optgroup>
+            <optgroup label="Reszta Świata">
+                <option value="Stany Zjednoczone">Stany Zjednoczone</option>
+                <option value="Chiny">Chiny</option>
+                <option value="Japonia">Japonia</option>
+                <option value="Australia">Australia</option>
+            </optgroup>
+        </select>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Preferencje czytelnicze</legend>
+        <label>Ulubione gatunki literackie:</label><br>
+        <input type="checkbox" id="g1" name="gatunek" value="powiesc"><label for="g1">Powieść</label>
+        <input type="checkbox" id="g2" name="gatunek" value="kryminal"><label for="g2">Kryminały</label>
+        <input type="checkbox" id="g3" name="gatunek" value="fantasy"><label for="g3">Fantasy</label>
+        <input type="checkbox" id="g4" name="gatunek" value="scifi"><label for="g4">Science Fiction</label>
+        <input type="checkbox" id="g5" name="gatunek" value="historia"><label for="g5">Historia</label>
+        <input type="checkbox" id="g6" name="gatunek" value="popularne"><label for="g6">Popularnonaukowe</label><br><br>
+        <label for="liczba">Liczba wypożyczanych książek miesięcznie:</label><br>
+        <input type="number" id="liczba" name="liczba" min="1" max="20" step="1" value="3"><br><br>
+        <label for="pora">Preferowana pora odwiedzin:</label><br>
+        <input type="time" id="pora" name="pora" min="07:00" max="22:00"><br><br>
+        <label for="aktywnosc">Aktywność czytelnicza (0-10):</label><br>
+        <input type="range" id="aktywnosc" name="aktywnosc" min="0" max="10" step="1" value="5">
+        <output for="aktywnosc">5</output><br><br>
+        <label for="kolor">Ulubiony kolor okładki:</label><br>
+        <input type="color" id="kolor" name="kolor" value="#3498db"><br><br>
+        <label for="url">Link do profilu czytelnika:</label><br>
+        <input type="url" id="url" name="url" placeholder="https://"><br><br>
+        <label for="foto">Wgranie zdjęcia legitymacyjnego:</label><br>
+        <input type="file" id="foto" name="foto" accept="image/png, image/jpeg"><br><br>
+        <label for="komentarz">Komentarz / uwagi:</label><br>
+        <textarea id="komentarz" name="komentarz" rows="5" cols="50" maxlength="500" placeholder="Wpisz dodatkowe uwagi..."></textarea>
+    </fieldset>
+    <br>
+    <label for="prof">Wypełnienie profilu:</label>
+    <meter id="prof" value="0.4" min="0" max="1" low="0.3" high="0.7" optimum="0.9"></meter><br>
+    <label for="wer">Postęp weryfikacji konta:</label>
+    <progress id="wer" value="25" max="100"></progress><br><br>
+    <button type="submit">Zarejestruj się</button>
+    <button type="reset">Wyczyść formularz</button>
+</form>
+</body>
+</html>
