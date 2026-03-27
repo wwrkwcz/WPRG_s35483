@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+}
+header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0 0 8px 0;
+}
+header p {
+    color: #ffffff;
+    font-style: italic;
+    margin: 0px;
+    font-size: 0.95rem;
+}
+nav {
+    padding: 15px 20px;
+}
+nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ol li {
+    display: block;
+    padding: 2px 0;
+    border: none;
+}
+nav ol li + li {
+    border: none;
+}
+nav ol li.active {
+    font-weight: bold;
+    color: #000000;
+}
+nav ol li:not(.active) {
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+fieldset {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+}
+legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000000;
+    padding: 0 8px;
+}
+fieldset label {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #000000;
+    display: inline-block;
+}
+fieldset p {
+    word-spacing: 0.05em;
+}
+#dane-osobowe {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+#dane-osobowe legend {
+    color: #0000ff;
+}
+#adres {
+    background-color: hsla(300, 100%, 50%, 0.2);
+}
+#adres legend {
+    color: hsl(300, 100%, 50%);
+    font-style: italic;
+}
+#preferencje {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+#preferencje legend {
+    font-style: italic;
+    font-variant: small-caps;
+    color: hsl(120, 100%, 50%);
+}
+input, select, textarea {
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 6px 8px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+input[type="text"] {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+input[type="email"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+input[type="tel"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+input[type="password"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 0.15em;
+}
+input[type="date"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+input[type="number"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+input[type="url"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+input[type="time"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+input[type="color"] {
+    padding: 2px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    height: 36px;
+    cursor: pointer;
+}
+input[type="file"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 4px;
+}
+input[type="range"] {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+input[required] {
+    border-left: 3px solid #ff0000;
+}
+select {
+    background-color: #f8f9fa;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+}
+textarea {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    resize: vertical;
+    width: 100%;
+    max-width: 500px;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    font-size: 0.85rem;
+    color: #000000;
+    margin-right: 12px;
+    cursor: pointer;
+}
+button[type="submit"],
+button[type="reset"] {
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-family: inherit;
+}
+button[type="submit"] {
+    background-color: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+button[type="reset"] {
+    background-color: #000000;
+    color: #ffffff;
+}
+.info {
+    font-style: italic;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.required {
+    color: red;
+    font-weight: bold;
+    margin-left: 2px;
+}
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
