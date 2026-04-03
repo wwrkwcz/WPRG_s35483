@@ -1,13 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    background-color: #f0f4f8;
     color: #000000;
     margin: 0;
     padding: 0;
     line-height: 1.5;
 }
 header {
-    background-color: #000000;
+    background-color: #1a3a5c;
     color: #ffffff;
     text-align: center;
     padding: 25px 20px;
@@ -18,15 +18,17 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 4px;
     margin: 0 0 8px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 0, 0, 0.4);
 }
 header p {
-    color: #ffffff;
+    color: #c8d8e8;
     font-style: italic;
-    margin: 0px;
+    margin: 0;
     font-size: 0.95rem;
 }
 nav {
     padding: 15px 20px;
+    background-color: #f0f4f8;
 }
 nav ol {
     list-style: none;
@@ -36,19 +38,17 @@ nav ol {
 nav ol li {
     display: block;
     padding: 2px 0;
-    border: none;
 }
-nav ol li + li {
-    border: none;
+nav ol li a {
+    color: #000000;
+    text-decoration: underline;
+}
+nav ol li + li a {
+    font-weight: bold;
 }
 nav ol li.active {
     font-weight: bold;
     color: #000000;
-}
-nav ol li:not(.active) {
-    color: #000000;
-    text-decoration: underline;
-    cursor: pointer;
 }
 main {
     max-width: 800px;
@@ -71,14 +71,14 @@ legend {
 fieldset label {
     font-size: 0.9rem;
     line-height: 1.8;
-    color: #000000;
+    color: #333333;
     display: inline-block;
 }
 fieldset p {
     word-spacing: 0.05em;
 }
 #dane-osobowe {
-    background-color: rgba(0, 0, 255, 0.2);
+    background-color: #e8f4fd;
 }
 #dane-osobowe legend {
     color: #0000ff;
@@ -91,12 +91,12 @@ fieldset p {
     font-style: italic;
 }
 #preferencje {
-    background-color: rgba(0, 255, 0, 0.2);
+    background-color: #e8f8e8;
 }
 #preferencje legend {
     font-style: italic;
     font-variant: small-caps;
-    color: hsl(120, 100%, 50%);
+    color: hsl(120, 100%, 35%);
 }
 input, select, textarea {
     font-family: inherit;
@@ -149,7 +149,7 @@ input[type="time"] {
 }
 input[type="color"] {
     padding: 2px;
-    border: 1px solid #ffffff;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     height: 36px;
     cursor: pointer;
@@ -201,20 +201,19 @@ button[type="reset"] {
     font-family: inherit;
 }
 button[type="submit"] {
-    background-color: #000000;
+    background-color: #1a3a5c;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
 }
-
 button[type="reset"] {
-    background-color: #000000;
+    background-color: #888888;
     color: #ffffff;
 }
 .info {
     font-style: italic;
-    color: #000000;
+    color: #555555;
     text-align: center;
     margin-bottom: 24px;
 }
@@ -224,7 +223,7 @@ button[type="reset"] {
     margin-left: 2px;
 }
 footer {
-    background-color: #000000;
+    background-color: #1a3a5c;
     color: #ffffff;
     text-align: center;
     padding: 20px;
