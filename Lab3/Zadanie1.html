@@ -11,9 +11,11 @@
     <p>Wiedza otwiera drzwi — zapisz się i czytaj bez granic</p>
 </header>
 <nav>
-    <a href="#">Strona główna</a><br>
-    <a href="#">Biblioteka Akademicka</a><br>
-    <span class="active">Rejestracja czytelnika</span>
+    <ol>
+        <li><a href="#">Strona główna</a></li>
+        <li><a href="#">Biblioteka Akademicka</a></li>
+        <li class="active">Rejestracja czytelnika</li>
+    </ol>
 </nav>
 <main>
     <p class="info">
@@ -28,8 +30,8 @@
             <label for="nazwisko">Nazwisko: <span class="required">*</span></label><br>
             <input type="text" id="nazwisko" name="nazwisko" required maxlength="60" placeholder="Wpisz nazwisko"><br>
             <label for="email">Adres e-mail: <span class="required">*</span></label><br>
-            <input type="email" id="email" name="email" required multiple placeholder="adres@email.pl"><br>
-            <label for="telefon">Nr. tel.:</label><br>
+            <input type="email" id="email" name="email" required multiple placeholder="adres@example.com"><br>
+            <label for="telefon">Numer telefonu:</label><br>
             <input type="tel" id="telefon" name="tel" pattern="[0-9]{9}" placeholder="123456789"><br>
             <label for="data-ur">Data urodzenia:</label><br>
             <input type="date" id="data-ur" name="data_ur" min="1900-01-01" max="2026-01-01"><br>
@@ -40,17 +42,17 @@
             <label for="plec-mezczyzna">Mężczyzna</label>
             <input type="radio" id="plec-inna" name="plec" value="I">
             <label for="plec-inna">Inna</label><br>
-            <label for="pesel">Nr PESEL: <span class="required">*</span></label><br>
+            <label for="pesel">Numer PESEL: <span class="required">*</span></label><br>
             <input type="password" id="pesel" name="pesel" required pattern="[0-9]{11}" placeholder="Wpisz 11 cyfr"><br>
         </fieldset>
         <fieldset id="adres">
             <legend>Adres</legend>
             <label for="ulica">Ulica i numer: <span class="required">*</span></label><br>
-            <input type="text" id="ulica" name="ulica" required placeholder="ul. Przykładowa 1"><br>
+            <input type="text" id="ulica" name="ulica" required placeholder="np. ul. Książkowa 5/10"><br>
             <label for="kod">Kod pocztowy:</label><br>
             <input type="text" id="kod" name="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000"><br>
-            <label for="miasto">Miasto: <span class="required">*</span></label><br>
-            <input id="miasto" name="miasto" list="lista-miast" required placeholder="Wpisz lub wybierz miasto"><br>
+            <label for="miasto">Miasto:</label><br>
+            <input type="text" id="miasto" name="miasto" list="lista-miast" required placeholder="Wpisz lub wybierz miasto"><br>
             <label for="kraj">Kraj: <span class="required">*</span></label><br>
             <select id="kraj" name="kraj" required>
                 <optgroup label="Europa">
@@ -70,18 +72,18 @@
             <legend>Preferencje czytelnicze</legend>
             <p>
                 <label>Ulubione gatunki literackie:</label><br>
-                <input type="checkbox" id="gatunek-poezja" name="gatunki" value="poezja">
-                <label for="gatunek-poezja">Poezja</label>
                 <input type="checkbox" id="gatunek-powiesc" name="gatunki" value="powiesc">
                 <label for="gatunek-powiesc">Powieść</label>
                 <input type="checkbox" id="gatunek-kryminal" name="gatunki" value="kryminal">
-                <label for="gatunek-kryminal">Kryminał</label>
-                <input type="checkbox" id="gatunek-fantastyka" name="gatunki" value="fantastyka">
-                <label for="gatunek-fantastyka">Fantastyka</label>
-                <input type="checkbox" id="gatunek-reportaz" name="gatunki" value="reportaz">
-                <label for="gatunek-reportaz">Reportaż</label>
-                <input type="checkbox" id="gatunek-biografia" name="gatunki" value="biografia">
-                <label for="gatunek-biografia">Biografia</label>
+                <label for="gatunek-kryminal">Kryminały</label>
+                <input type="checkbox" id="gatunek-fantasy" name="gatunki" value="fantasy">
+                <label for="gatunek-fantasy">Fantasy</label>
+                <input type="checkbox" id="gatunek-sf" name="gatunki" value="sf">
+                <label for="gatunek-sf">Science Fiction</label>
+                <input type="checkbox" id="gatunek-historia" name="gatunki" value="historia">
+                <label for="gatunek-historia">Historia</label>
+                <input type="checkbox" id="gatunek-popularnonaukowe" name="gatunki" value="popularnonaukowe">
+                <label for="gatunek-popularnonaukowe">Popularnonaukowe</label>
                 <br><br>
                 <label for="liczba-ksiazek">Liczba wypożyczanych książek miesięcznie:</label><br>
                 <input type="number" id="liczba-ksiazek" name="liczba_ksiazek" min="1" max="20" step="1" value="3"><br>
@@ -93,12 +95,12 @@
                 <output id="wartoscAktywnosci" for="aktywnosc">5</output><br>
                 <label for="kolor-okladki">Ulubiony kolor okładki:</label><br>
                 <input type="color" id="kolor-okladki" name="kolor_okladki" value="#3498db"><br>
-                <label for="profil-url">Link do profilu czytelnika:</label><br>
+                <label for="profil-url">Link do profilu czytelnika (blog/strona):</label><br>
                 <input type="url" id="profil-url" name="profil_url" placeholder="https://"><br>
-                <label for="zdjecie-legitymacyjne">Wgranie zdjęcia legitymacyjnego:</label><br>
+                <label for="zdjecie-legitymacyjne">Zdjęcie legitymacyjne:</label><br>
                 <input type="file" id="zdjecie-legitymacyjne" name="zdjecie_legitymacyjne" accept="image/png, image/jpeg"><br>
                 <label for="uwagi">Komentarz / uwagi:</label><br>
-                <textarea id="uwagi" name="uwagi" rows="5" cols="50" maxlength="500" placeholder="Wpisz dodatkowe uwagi..."></textarea>
+                <textarea id="uwagi" name="uwagi" rows="5" cols="50" maxlength="500" placeholder="Wpisz dodatkowe uwagi (max 500 znaków)..."></textarea>
             </p>
         </fieldset>
         <label for="wypelnienie-profilu">Wypełnienie profilu:</label><br>
@@ -122,8 +124,8 @@
     </datalist>
 </main>
 <footer>
-    <p>© 2026 Biblioteka Akademicka. Wszelkie prawa zastrzeżone.</p>
-    <p><a href="mailto:kontakt@biblioteka.edu.pl">kontakt@biblioteka.edu.pl</a></p>
+    <p>© <time datetime="2026">2026</time> Biblioteka Akademicka. Wszelkie prawa zastrzeżone.</p>
+    <p>Kontakt: <a href="mailto:biblioteka@akademia.pl">biblioteka@akademia.pl</a></p>
 </footer>
 </body>
 </html>
